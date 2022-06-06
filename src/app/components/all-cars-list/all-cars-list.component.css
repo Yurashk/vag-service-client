@@ -1,0 +1,13 @@
+.container{
+  min-height: 100vh;
+  height: auto;
+}
+.example-card {
+  width:100%
+}
+.button-add-car{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 5;
+}

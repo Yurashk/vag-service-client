@@ -1,0 +1,80 @@
+<div class="container py-3">
+  <div *ngIf="!carDidLoaded" class="row d-flex justify-content-center py-5">
+    <div class="spinner-grow text-warning" role="status">
+      <span class="sr-only"></span>
+    </div>
+  </div>
+  <ng-container *ngIf="carDidLoaded">
+    <div class="row bg-light py-3">
+      <div class="col-md-6">
+        <img class="border rounded" src="{{currentCar.photoUrl}}" style="width: 250px"/>
+      </div>
+      <div class="col-md-6 d-flex flex-column align-items-end justify-content-center">
+        <h2>Авто: <b>{{currentCar.name}}</b></h2>
+        <h2>Власник: <b>{{currentCar.ownerPhone}}</b></h2>
+        <button (click)="saveChanges()" class="btn btn-primary  my-3 btn-lg">
+          Зберегти
+        </button>
+      </div>
+
+    </div>
+    <div class="row my-3 bg-light py-3">
+      <div class="example-container col-md-4">
+        <h2 class=" text-center">Всі роботи</h2>
+        <div
+          #worksList="cdkDropList"
+          (cdkDropListDropped)="drop($event)"
+          [cdkDropListConnectedTo]="[todoList]"
+          [cdkDropListData]="allWorks"
+          cdkDropList
+          class="example-list ">
+          <div *ngFor="let item of allWorks" cdkDrag class="example-box">{{item}}</div>
+        </div>
+      </div>
+
+      <div class="example-container col-md-4">
+        <h2 class=" text-center text-warning">Роботи в процесі</h2>
+
+        <div
+          #todoList="cdkDropList"
+          (cdkDropListDropped)="drop($event)"
+          [cdkDropListConnectedTo]="[doneList]"
+          [cdkDropListData]="worksInProgress"
+          cdkDropList
+          class="example-list  bg-warning">
+          <div *ngFor="let item of worksInProgress" cdkDrag class="example-box">{{item}}</div>
+        </div>
+      </div>
+      <div class="example-container col-md-4">
+        <h2 class=" text-center text-success">Виконані роботи</h2>
+        <div
+          #doneList="cdkDropList"
+          (cdkDropListDropped)="drop($event)"
+          [cdkDropListConnectedTo]="[todoList]"
+          [cdkDropListData]="worksDone"
+          cdkDropList
+          class="example-list  bg-success">
+          <div *ngFor="let item of worksDone" cdkDrag class="example-box">{{item}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2 bg-light rounded mb-5">
+      <h3 class="text-center mt-2">Додати нову роботу</h3>
+      <div class="col-12 p-2">
+        <textarea class="form-control" ngModel (ngModelChange)="toArray($event)"  id="form3Example4c5" rows="3"></textarea>
+      </div>
+      <div class="col-12 d-flex justify-content-center align-items-center p-3">
+        <button (click)="saveNewWorksChanges()" class="btn btn-primary  btn-lg">
+          Додати нову роботу
+        </button>
+      </div>
+    </div>
+<!--    <div class="row d-flex justify-content-center bg-light my-3">-->
+<!--      <div class="col-6">-->
+<!--        <button (click)="saveChanges()" class="btn btn-primary w-100 my-3 btn-lg">-->
+<!--          Зберегти-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </div>-->
+  </ng-container>
+</div>

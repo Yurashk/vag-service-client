@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+*{
+  font-family:'Ubuntu', 'arial', sans-serif;
+}
+body {
+  margin: 0;
+
+
+}
+.mat-expansion-panel-body {
+  padding: 0!important;
+}
+@font-face {
+  font-family: Ubuntu;
+  src: url(assets/fonts/ubuntu/Ubuntu-M.ttf) format("opentype");
+}

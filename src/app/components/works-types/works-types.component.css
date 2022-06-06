@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+}
+
+.mat-column-symbol{
+  width: 35px;
+  text-align: center;
+  font-weight: bold;
+}
+.mat-speed-symbol{
+  width: 33%;
+  text-align: center;
+  font-weight: bold;
+}
+.mat-name-symbol{
+  width: 25%;
+  font-weight: bold;
+}
