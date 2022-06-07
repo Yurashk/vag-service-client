@@ -9,7 +9,7 @@ import {ManageCarsComponent} from "../../components/manage-cars";
 import {AllCarsListComponent} from "../../components/all-cars-list";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/about-us', pathMatch: 'full'},
+  {path: '', redirectTo: '/works-by-vehicle', pathMatch: 'full'},
   {
     path: '',
     component: MainPageComponent,
