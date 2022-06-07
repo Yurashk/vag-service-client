@@ -16,7 +16,6 @@ export class WorksComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
     let userId: any = jwt_decode(<string>localStorage.getItem('access_token'));
     console.log(userId);
     this.carsService.getUserCars(userId.id).subscribe((res: CarsInterface[]) => {

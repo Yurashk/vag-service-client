@@ -41,7 +41,7 @@
           [cdkDropListConnectedTo]="[doneList]"
           [cdkDropListData]="worksInProgress"
           cdkDropList
-          class="example-list  bg-warning">
+          class="example-list  bg-warning" style="--bs-bg-opacity: .6;">
           <div *ngFor="let item of worksInProgress" cdkDrag class="example-box">{{item}}</div>
         </div>
       </div>
@@ -53,7 +53,7 @@
           [cdkDropListConnectedTo]="[todoList]"
           [cdkDropListData]="worksDone"
           cdkDropList
-          class="example-list  bg-success">
+          class="example-list  bg-success" style="--bs-bg-opacity: .6;">
           <div *ngFor="let item of worksDone" cdkDrag class="example-box">{{item}}</div>
         </div>
       </div>
