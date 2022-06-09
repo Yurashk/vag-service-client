@@ -7,6 +7,7 @@ import {WorksTypesComponent} from "../../components/works-types/works-types.comp
 import {WorksComponent} from "../../components/works/works.component";
 import {ManageCarsComponent} from "../../components/manage-cars";
 import {AllCarsListComponent} from "../../components/all-cars-list";
+import {AuthorizationComponent} from "../auth";
 
 const routes: Routes = [
   {path: '', redirectTo: '/works-by-vehicle', pathMatch: 'full'},
@@ -20,6 +21,7 @@ const routes: Routes = [
       // {path: 'manage-cars', component: ManageCarsComponent},
       {path: 'all-cars', component: AllCarsListComponent},
       {path: 'manage-car/:id', component: ManageCarsComponent},
+      {path: 'add-new-user', component: AuthorizationComponent},
     ]
     // { path: 'componentB', component: BComponent },
     // { path: 'componentC', component: CComponent }

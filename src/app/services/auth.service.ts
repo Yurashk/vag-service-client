@@ -22,6 +22,15 @@ export class AuthService {
       }
     );
   }
+  onCreateNewUser(phone: string, password: string) {
+    return this.http.post(
+      `${environment.baseEndpoint}auth/registration`,
+      {
+        phone,
+        password,
+      }
+    );
+  }
 
   logout() {
     localStorage.clear();

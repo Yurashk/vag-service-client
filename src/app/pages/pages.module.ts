@@ -1,7 +1,7 @@
 import {NgModule} from "@angular/core";
 import {BrowserModule} from "@angular/platform-browser";
 import {CommonModule} from "@angular/common";
-import {LoginComponent} from "./auth";
+import {AuthorizationComponent, LoginComponent} from "./auth";
 import {PagesRoutingModule} from "./pages-routing.module";
 import { MainPageComponent } from './main-page/main-page.component';
 import {MatButtonModule} from "@angular/material/button";
@@ -19,6 +19,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 @NgModule({
   declarations: [
     LoginComponent,
+    AuthorizationComponent
   ],
   imports: [
     CommonModule,

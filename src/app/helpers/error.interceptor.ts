@@ -71,7 +71,7 @@ export class ErrorNotificationInterceptor implements HttpInterceptor {
               }
             }
           } else {
-            console.error("some thing else happened");
+            localStorage.clear()
           }
           return throwError(error);
         }

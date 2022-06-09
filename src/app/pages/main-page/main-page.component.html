@@ -22,7 +22,7 @@
             {{item.name}}
           </span>
         </a>
-        <a (click)="snav.close()" *ngIf="currentUserPone==='0936313130'"
+        <a (click)="snav.close()" *ngIf="currentUserPone==='0936313130' || '687846597'"
            [routerLinkActive]="'is-active'"
            class="d-flex mat-list-link" mat-list-item routerLink="all-cars">
           <mat-icon aria-hidden="false" aria-label="Example home icon" class="mr-2"
@@ -32,9 +32,20 @@
             Керувати
           </span>
         </a>
+        <a (click)="snav.close()" *ngIf="currentUserPone==='0936313130' || '687846597'"
+           [routerLinkActive]="'is-active'"
+           class="d-flex mat-list-link" mat-list-item routerLink="add-new-user">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" class="mr-2"
+                    style="margin-right: 10px!important;">person_add
+          </mat-icon>
+
+          <span class="ml-2">
+            Додати користувача
+          </span>
+        </a>
         <a (click)="logout()"
            [routerLinkActive]="'is-active'"
-           class="d-flex mat-list-link mt-5" mat-list-item routerLink="all-cars">
+           class="d-flex mat-list-link mt-5" mat-list-item >
           <mat-icon aria-hidden="false" aria-label="Example home icon" class="mr-2"
                     style="margin-right: 10px!important;">exit_to_app
           </mat-icon>
