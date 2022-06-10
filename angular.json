@@ -17,7 +17,14 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
+        "serve": {
+          "options": {
+            "host": "vag-cars.in.ua",
+            "port": 80
+          }
+        },
         "build": {
+
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/vag-cars-trecker",
