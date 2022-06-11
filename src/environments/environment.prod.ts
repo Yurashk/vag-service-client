@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseEndpoint: 'https://vag-cars.in.ua:5000/',
+  baseEndpoint: 'http://vag-cars.in.ua:5000/',
 };
