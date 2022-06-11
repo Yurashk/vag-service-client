@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseEndpoint: 'http://vag-cars.in.ua:5000/',
+  baseEndpoint: 'https://vag-cars.in.ua:5000/',
 };
 
 /*
