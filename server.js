@@ -1,12 +1,12 @@
-// const express=require('express')
-// const path=require('path')
-//
-// const PORT=process.env.PORT || 80
-// const app=express()
-// app.use(express.static(__dirname))
-// app.use(express.static(path.resolve(__dirname,'dist/vag-cars-trecker')))
-// app.get('*',(req,res)=>{
-//     res.sendFile(path.join(__dirname,'dist/vag-cars-trecker','index.html'))
-// })
-//
-// app.listen(PORT)
+const express=require('express')
+const path=require('path')
+
+const PORT= 80
+const app=express()
+app.use(express.static(__dirname))
+app.use(express.static(path.resolve(__dirname,'dist/vag-cars-trecker')))
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'dist/vag-cars-trecker','index.html'))
+})
+
+app.listen(PORT)
